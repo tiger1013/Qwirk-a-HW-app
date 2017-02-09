@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="14dp" >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_image"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@android:drawable/sym_def_app_icon"
+        android:clickable="true"
+        android:onClick="clickFunction" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/user_image"
+        android:layout_toRightOf="@id/user_image"
+        android:fontFamily="sans-serif-condensed"
+        android:paddingLeft="26dp"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/username"
+        android:layout_alignStart="@id/username"
+        android:layout_below="@id/username"
+        android:fontFamily="sans-serif-light"
+        android:paddingBottom="6dp"
+        android:paddingLeft="26dp"
+        android:paddingTop="10dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/like_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/text"
+        android:layout_alignStart="@id/text"
+        android:layout_below="@id/text"
+        android:clickable="true"
+        android:paddingBottom="6dp"
+        android:paddingLeft="26dp"
+        android:paddingTop="10dp"
+        android:text="Like"
+        android:textColor="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/comment_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/text"
+        android:layout_alignStart="@id/text"
+        android:layout_alignTop="@id/like_button"
+        android:layout_below="@id/text"
+        android:layout_toRightOf="@id/like_button"
+        android:clickable="true"
+        android:paddingBottom="6dp"
+        android:paddingLeft="70dp"
+        android:paddingTop="10dp"
+        android:text="Comment"
+        android:textColor="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/time_stamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/text"
+        android:clickable="true"
+        android:paddingTop="10dp"
+        android:text="5h"
+        android:textColor="@color/colorAccent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".01dp"
+        android:layout_alignLeft="@id/username"
+        android:layout_alignStart="@id/username"
+        android:layout_below="@+id/like_button"
+        android:layout_marginLeft="26dp"
+        android:background="@android:color/darker_gray"
+        android:paddingTop="10dp" />
+
+</RelativeLayout>

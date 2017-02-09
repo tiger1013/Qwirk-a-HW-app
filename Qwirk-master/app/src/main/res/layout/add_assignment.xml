@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/twozero">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/onezero"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.32"
+                    android:text="Class"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/etxtclassname"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fourzero"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/onesix"
+                    android:visibility="gone" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/textView1"
+                    android:layout_weight="0.79"
+                    android:ems="10"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/five"
+                android:background="@android:color/black"
+                android:visibility="gone"></View>
+
+            <LinearLayout
+                android:id="@+id/ll_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_name"
+                android:layout_marginTop="@dimen/oneseven"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.06"
+                    android:fontFamily="sans-serif"
+                    android:text="Title"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/etxt_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fourzero"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/onesix"
+                    android:visibility="gone" />
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/textView1"
+                    android:ems="10"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/five"
+                android:background="@android:color/black"
+                android:visibility="gone"></View>
+
+            <LinearLayout
+                android:id="@+id/ll_post"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_name"
+                android:layout_marginTop="@dimen/onezero"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_post"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Description"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/etxt_post"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fourzero"
+                    android:layout_marginTop="@dimen/five"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/onesix" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_duedate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/onezero"
+                android:fontFamily="sans-serif"
+                android:text="Due Date"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/five"
+                android:layout_weight="2">
+
+                <Spinner
+                    android:id="@+id/spinnertime"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fourzero"
+                    android:layout_marginRight="@dimen/five"
+                    android:layout_weight="1"
+                    android:entries="@array/time"
+                    android:spinnerMode="dialog"></Spinner>
+
+                <Spinner
+                    android:id="@+id/spinnerdays"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fourzero"
+                    android:layout_weight="1"
+                    android:entries="@array/days"
+                    android:spinnerMode="dialog"></Spinner>
+            </LinearLayout>
+
+
+            <CheckBox
+                android:text="Display on feed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimary"
+                />
+
+            <TextView
+                android:id="@+id/txt_timetowork"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/onezero"
+                android:gravity="center_horizontal"
+                android:text="Allocate Time"
+                android:textColor="@color/colorPrimary"
+                android:paddingBottom="10dp"
+                android:textSize="@dimen/twozero"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/five"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <Button
+                    android:background="@color/colorPrimaryDark"
+                    android:id="@+id/btn_now"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="timeNow"
+                    android:text="Now" />
+
+                <Button
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:textColor="@android:color/white"
+                    android:id="@+id/btn_later"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="timeLater"
+                    android:text="Later" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

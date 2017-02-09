@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/comments_page" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/fav"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:paddingBottom="10dp"
+        android:src="@mipmap/ic_fav" />
+
+    <ImageView
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:paddingBottom="10dp"
+        android:src="@mipmap/ic_send" />
+
+    <EditText
+        android:id="@+id/add_comment"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/submit"
+        android:layout_toRightOf="@id/fav"
+        android:hint="Add a comment"
+        android:imeOptions="actionDone"
+        android:singleLine="true" />
+
+</RelativeLayout>
